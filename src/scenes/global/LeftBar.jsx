@@ -19,7 +19,8 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 // IMAGES
-import Doctor from "../../"
+import Doctor from "../../../src/DOCTOR.png"
+import Logo from "../../../src/Pinpoint.svg"
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -85,8 +86,8 @@ const LeftBar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  BMC
+                <Typography variant="h3" color={colors.grey[100]} width="20px">
+                  <img src={Logo} alt="logo" style={{width:"100px",color: "black"}}/>
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -102,7 +103,7 @@ const LeftBar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.png`}
+                  src={Doctor}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -113,7 +114,7 @@ const LeftBar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                 Dr Okolie
+                
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
                    Admin

@@ -1,8 +1,8 @@
-const Calendar = () =>{
+const calendar = () =>{
 return (
     <div>
-        <p>Calendar</p>
+        <p>Calendar jOURNAL</p>
     </div>
 )
 }
-export default Calendar;
+export default calendar;
