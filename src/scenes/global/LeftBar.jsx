@@ -11,12 +11,12 @@ import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
+// import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
+// import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+// import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+// import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 // IMAGES
 import Doctor from "../../../src/DOCTOR.png"
@@ -35,9 +35,10 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       }}
       onClick={() => setSelected(title)}
       icon={icon}
+      routerLink={<Link to={to} />}
     >
       <Typography>{title}</Typography>
-      <Link to={to} />
+    
     </MenuItem>
   );
 };
@@ -46,7 +47,7 @@ const LeftBar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState("");
 
   return (
     <Box
@@ -149,13 +150,17 @@ const LeftBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+         <Box display="flex">
+           
             <Item
               title="Patient Information"
-              to="/contacts"
+              to="/managepatients"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
+            
+        </Box>
             <Item
               title="Invoices Balances"
               to="/invoices"
