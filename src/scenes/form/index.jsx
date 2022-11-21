@@ -88,6 +88,48 @@ helperText={touched.Age && errors.Age}
 sx={{gridColumn: "span 2"}}
 />
 {/* Phone Number */}
+<TextField
+fullWidth
+variant="filled"
+type="number"
+label="Phone Number"
+onBlur={handleBlur}
+onChange={handleChange}
+value={values.PhoneNumber}
+name="Name"
+errors={!!touched.PhoneNumber && !!errors.PhoneNumber}
+helperText={touched.PhoneNumber && errors.PhoneNumber}
+sx={{gridColumn: "span 2"}}
+/>
+{/* Email */}
+<TextField
+fullWidth
+variant="filled"
+type="email"
+label="Email Address"
+onBlur={handleBlur}
+onChange={handleChange}
+value={values.Email}
+name="Name"
+errors={!!touched.Email && !!errors.Email}
+helperText={touched.Email && errors.Email}
+sx={{gridColumn: "span 2"}}
+/>
+{/* Medical Condition */}
+<TextField
+fullWidth
+variant="filled"
+type="text"
+label="Medical Condition"
+onBlur={handleBlur}
+onChange={handleChange}
+value={values.MedicalCondition}
+name="Name"
+errors={!!touched.MedicalCondition && !!errors.MedicalCondition}
+helperText={touched.MedicalCondition && errors.MedicalCondition}
+sx={{gridColumn: "span 2"}}
+/>
+
 
 
 </Box>
