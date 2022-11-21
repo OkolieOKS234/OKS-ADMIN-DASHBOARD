@@ -13,7 +13,7 @@ import ManagePatients from "./scenes/patients/managepatients";
 // import Form from "./scenes/form";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
-// import FAQ from "./scenes/faq";
+import Faq from "./scenes/faqs/faq";
 // import Geography from "./scenes/geography";
 // import calendar from "./scenes/calendar/calendar";
 
@@ -30,12 +30,12 @@ function App() {
             <Routes>
                <Route path="/" element={<Dashboard />} /> 
               <Route path="/managepatients" element={<ManagePatients />} />
-              {/* <Route path="/form" element={<Form />} />
+               {/* <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/geography" element={<Geography />} />  */}
+              <Route path="/line" element={<Line />} /> */}
+              <Route path="/faq" element={<Faq/>} />
+              {/* <Route path="/geography" element={<Geography />} />   */}
                {/* <Route path="/calendar" element={<calendar />} />   */}
             </Routes>
           </main>

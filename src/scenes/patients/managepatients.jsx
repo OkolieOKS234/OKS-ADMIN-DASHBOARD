@@ -3,6 +3,7 @@ import {Box, Typography, useTheme} from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import {tokens} from "../../theme";
 import {mockDataTeam} from "../../data/mockData";
+import AddNewPatients from "./addnewpatients"
 // Importing our icons needed
 import AdminPanelSettingsOutlinedIcon  from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon  from "@mui/icons-material/LockOpenOutlined";
@@ -49,6 +50,7 @@ const ManagePatients = ()=> {
   
     return (
       <Box m="20px">
+        
         <Header title="PATIENTS" subtitle="Managing the Patients Onboard" />
         <Box
           m="40px 0 0 0"
@@ -79,7 +81,8 @@ const ManagePatients = ()=> {
             },
           }}
         >
-          <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
+          <AddNewPatients/>
+          <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} sx={{marginTop:"10px"}} />
         </Box>
       </Box>
     );
