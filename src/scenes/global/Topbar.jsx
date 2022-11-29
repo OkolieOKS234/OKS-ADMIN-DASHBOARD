@@ -5,10 +5,9 @@ import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonModeOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
-import { borderRadius } from "@mui/system";
+
 
 const Topbar = () => {
   const theme = useTheme();
@@ -46,9 +45,6 @@ const Topbar = () => {
           <NotificationsOutlinedIcon />
         </IconButton>
 
-        <IconButton>
-          <SettingsOutlinedIcon />
-        </IconButton>
 
         <IconButton>
           <PersonModeOutlinedIcon />
