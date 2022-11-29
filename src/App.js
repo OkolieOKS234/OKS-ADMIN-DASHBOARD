@@ -15,7 +15,7 @@ import Form from "./scenes/form/index";
 // import Pie from "./scenes/pie";
 import Faq from "./scenes/faqs/faq";
 // import Geography from "./scenes/geography";
-import Event from "./scenes/calendar/calendar";
+import Calendar from "./scenes/calendar/calendar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -37,7 +37,7 @@ function App() {
               <Route path="/faq" element={<Faq/>} />
               <Route path="/form" element={<Form/>} />
               {/* <Route path="/geography" element={<Geography />} />   */}
-               <Route path="/calendar" element={<Event />} />  
+               <Route path="/calendar" element={<Calendar />} />  
             </Routes>
           </main>
         </div>
