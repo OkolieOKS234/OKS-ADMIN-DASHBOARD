@@ -64,7 +64,7 @@ sx={{
 fullWidth
 variant="filled"
 type="text"
-label="First Name"
+label="Full Name"
 onBlur={handleBlur}
 onChange={handleChange}
 value={values.Name}
@@ -78,25 +78,25 @@ sx={{gridColumn: "span 2"}}
 fullWidth
 variant="filled"
 type="number"
-label="First Name"
+label="Age"
 onBlur={handleBlur}
 onChange={handleChange}
 value={values.Age}
 name="Age"
 errors={!!touched.Age && !!errors.Age}
 helperText={touched.Age && errors.Age}
-sx={{gridColumn: "span 2"}}
+sx={{gridColumn: "span 4"}}
 />
 {/* Phone Number */}
 <TextField
 fullWidth
 variant="filled"
-type="number"
+type="text"
 label="Phone Number"
 onBlur={handleBlur}
 onChange={handleChange}
 value={values.PhoneNumber}
-name="Name"
+name="PhoneNumber"
 errors={!!touched.PhoneNumber && !!errors.PhoneNumber}
 helperText={touched.PhoneNumber && errors.PhoneNumber}
 sx={{gridColumn: "span 2"}}
@@ -110,10 +110,10 @@ label="Email Address"
 onBlur={handleBlur}
 onChange={handleChange}
 value={values.Email}
-name="Name"
+name="Email"
 errors={!!touched.Email && !!errors.Email}
 helperText={touched.Email && errors.Email}
-sx={{gridColumn: "span 2"}}
+sx={{gridColumn: "span 4"}}
 />
 {/* Medical Condition */}
 <TextField
@@ -124,16 +124,18 @@ label="Medical Condition"
 onBlur={handleBlur}
 onChange={handleChange}
 value={values.MedicalCondition}
-name="Name"
+name="MedicalCondition"
 errors={!!touched.MedicalCondition && !!errors.MedicalCondition}
 helperText={touched.MedicalCondition && errors.MedicalCondition}
-sx={{gridColumn: "span 2"}}
+sx={{gridColumn: "span 4"}}
 />
 
 
 
 </Box>
-
+<Box display="flex" justifyContent="end" mt="20px">
+<Button variant="contained" sx={{backgroundColor:"red"}} type="submit">Submit</Button>
+</Box>
 </form>
 
 )}
@@ -142,3 +144,4 @@ sx={{gridColumn: "span 2"}}
  
   </Box>  
 }
+export default Form;

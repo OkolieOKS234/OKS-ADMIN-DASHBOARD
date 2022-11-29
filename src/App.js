@@ -10,12 +10,12 @@ import ManagePatients from "./scenes/patients/managepatients";
 // import Invoice from "./scenes/invoice/invoice";
 // import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
-// import Form from "./scenes/form";
+import Form from "./scenes/form/index";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
 import Faq from "./scenes/faqs/faq";
 // import Geography from "./scenes/geography";
-// import calendar from "./scenes/calendar/calendar";
+import Event from "./scenes/calendar/calendar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -35,8 +35,9 @@ function App() {
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} /> */}
               <Route path="/faq" element={<Faq/>} />
+              <Route path="/form" element={<Form/>} />
               {/* <Route path="/geography" element={<Geography />} />   */}
-               {/* <Route path="/calendar" element={<calendar />} />   */}
+               <Route path="/calendar" element={<Event />} />  
             </Routes>
           </main>
         </div>
