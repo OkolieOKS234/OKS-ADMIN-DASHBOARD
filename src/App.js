@@ -9,7 +9,7 @@ import Dashboard from "./scenes/dashboard/index";
 import ManagePatients from "./scenes/patients/managepatients";
 // import Invoice from "./scenes/invoice/invoice";
 // import Contacts from "./scenes/contacts";
-// import Bar from "./scenes/bar";
+import Bar from "./scenes/bar/index";
 import Form from "./scenes/form/index";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
@@ -28,16 +28,16 @@ function App() {
           <main className="content">
             <Topbar />
             <Routes>
-               <Route path="/" element={<Dashboard />} /> 
+              <Route path="/" element={<Dashboard />} />
               <Route path="/managepatients" element={<ManagePatients />} />
-               {/* <Route path="/form" element={<Form />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} /> */}
-              <Route path="/faq" element={<Faq/>} />
-              <Route path="/form" element={<Form/>} />
+              {/* <Route path="/form" element={<Form />} /> */}
+              <Route path="bar_chart" element={<Bar />} />
+              {/* <Route path="/pie" element={<Pie />} />
+              <Route path="/line" element={<Line />} />  */}
+              <Route path="/faq" element={<Faq />} />
+              <Route path="/form" element={<Form />} />
               {/* <Route path="/geography" element={<Geography />} />   */}
-               <Route path="/calendar" element={<Calendar />} />  
+              <Route path="/calendar" element={<Calendar />} />
             </Routes>
           </main>
         </div>

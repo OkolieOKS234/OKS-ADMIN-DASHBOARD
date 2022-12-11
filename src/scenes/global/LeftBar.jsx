@@ -19,15 +19,13 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 // import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 // IMAGES
-import Doctor from "../../../src/DOCTOR.png"
-import Logo from "../../../src/healthicon.png"
-
+import Doctor from "../../../src/DOCTOR.png";
+import Logo from "../../../src/healthicon.png";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-
     <MenuItem
       active={selected === title}
       style={{
@@ -38,7 +36,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       routerLink={<Link to={to} />}
     >
       <Typography>{title}</Typography>
-    
     </MenuItem>
   );
 };
@@ -51,25 +48,29 @@ const LeftBar = () => {
 
   return (
     <Box
-        sx={{
-          "& .pro-sidebar-inner": {
-            background: `${colors.primary[400]} !important`,
-          },
-          "& .pro-icon-wrapper": {
-            backgroundColor: "transparent !important",
-          },
-          "& .pro-inner-item": {
-            padding: "5px 35px 5px 20px !important",
-          },
-          "& .pro-inner-item:hover": {
-            color: "#868dfb !important",
-          },
-          "& .pro-menu-item.active": {
-            color: "#6870fa !important",
-          },
-        }}
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#868dfb !important",
+        },
+        "& .pro-menu-item.active": {
+          color: "#6870fa !important",
+        },
+      }}
     >
-      <Sidebar collapsed={isCollapsed} backgroundColor={colors.primary[900]} height="100%">
+      <Sidebar
+        collapsed={isCollapsed}
+        backgroundColor={colors.primary[900]}
+        height="100%"
+      >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -87,12 +88,22 @@ const LeftBar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]} width="10px" display="flex">
-                  <img src={Logo} alt="logo" style={{width:"30px",color: "black"}}/>
-                  <Typography fontSize="20px" color="orangered">BMC</Typography>   
-             
+                <Typography
+                  variant="h3"
+                  color={colors.grey[100]}
+                  width="10px"
+                  display="flex"
+                >
+                  <img
+                    src={Logo}
+                    alt="logo"
+                    style={{ width: "30px", color: "black" }}
+                  />
+                  <Typography fontSize="20px" color="orangered">
+                    BMC
+                  </Typography>
                 </Typography>
-                
+
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
@@ -117,11 +128,9 @@ const LeftBar = () => {
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
-                >
-                
-                </Typography>
+                ></Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                   Admin
+                  Admin
                 </Typography>
               </Box>
             </Box>
@@ -150,17 +159,15 @@ const LeftBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-         <Box display="flex">
-           
-            <Item
-              title="Patient Information"
-              to="/managepatients"
-              icon={<ContactsOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            
-        </Box>
+            <Box display="flex">
+              <Item
+                title="Patient Information"
+                to="/managepatients"
+                icon={<ContactsOutlinedIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            </Box>
             <Item
               title="Invoices Balances"
               to="/invoices"
@@ -197,8 +204,8 @@ const LeftBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
-<Typography
+            {/* EMP section */}
+            <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px", color: "orange" }}
@@ -226,8 +233,35 @@ const LeftBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
-           
+            {/* Data visualization */}
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px", color: "orange" }}
+            >
+              DATA
+            </Typography>
+            <Item
+              title="Bar Chart"
+              to="/bar_chart"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Meeting Calendar"
+              to="/calendar"
+              icon={<CalendarTodayOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="About Us"
+              to="/faq"
+              icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </Box>
         </Menu>
       </Sidebar>

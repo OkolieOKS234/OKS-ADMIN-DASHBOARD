@@ -1,6 +1,5 @@
 import { tokens } from "../theme";
 
-
 // Workers
 export const mockDataTeam = [
   {
@@ -286,8 +285,6 @@ export const mockDataInvoices = [
   },
 ];
 
-
-
 export const mockTransactions = [
   {
     txId: "01e4dsa",
@@ -451,7 +448,6 @@ export const mockPieData = [
     color: "hsl(344, 70%, 50%)",
   },
 ];
-
 
 // Line Data
 export const mockLineData = [
