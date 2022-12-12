@@ -249,15 +249,15 @@ const LeftBar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Meeting Calendar"
-              to="/calendar"
+              title="Pie Chart"
+              to="/pie_chart"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="About Us"
-              to="/faq"
+              title="Line Chart"
+              to="/line_chart"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
