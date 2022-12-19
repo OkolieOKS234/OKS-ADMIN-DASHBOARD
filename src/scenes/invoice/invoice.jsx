@@ -1,9 +1,10 @@
-const Invoice = ()=>{
-<>
-<div>
-    INVOICE BALANCE
-</div>
+import { Box, Typography, Button } from "@mui/material";
 
-</>
-}
-export default Invoice
+const Payment = () => {
+  return (
+    <>
+      <div>INVOICE BALANCE</div>
+    </>
+  );
+};
+export default Payment;

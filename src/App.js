@@ -7,7 +7,7 @@ import Sidebar from "./scenes/global/LeftBar";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./scenes/dashboard/index";
 import ManagePatients from "./scenes/patients/managepatients";
-// import Invoice from "./scenes/invoice/invoice";
+import Payment from "./scenes/invoice/invoice";
 // import Contacts from "./scenes/contacts";
 import Bar from "./scenes/bar/index";
 import Form from "./scenes/form/index";
@@ -38,6 +38,7 @@ function App() {
               <Route path="/form" element={<Form />} />
               {/* <Route path="/geography" element={<Geography />} />   */}
               <Route path="/calendar" element={<Calendar />} />
+              <Route path="/invoices" element={<Payment />} />
             </Routes>
           </main>
         </div>

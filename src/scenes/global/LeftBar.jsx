@@ -69,9 +69,10 @@ const LeftBar = () => {
       <Sidebar
         collapsed={isCollapsed}
         backgroundColor={colors.primary[900]}
-        height="100%"
+        height="100vh"
+        marginBottom="0"
       >
-        <Menu iconShape="square">
+        <Menu>
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -169,7 +170,7 @@ const LeftBar = () => {
               />
             </Box>
             <Item
-              title="Invoices Balances"
+              title=" Create Invoice "
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
@@ -245,20 +246,6 @@ const LeftBar = () => {
               title="Bar Chart"
               to="/bar_chart"
               icon={<PersonOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Pie Chart"
-              to="/pie_chart"
-              icon={<CalendarTodayOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Line Chart"
-              to="/line_chart"
-              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
