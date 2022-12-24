@@ -176,6 +176,13 @@ const LeftBar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Item
+              title="Invoice Data "
+              to="/invoices"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
 
             <Typography
               variant="h6"
@@ -185,7 +192,7 @@ const LeftBar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Patient Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
